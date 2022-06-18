@@ -7,14 +7,14 @@
 ## 下载
 
 ``` bash
-npm install @charrue/load-local-config
+npm install @charrue/load-config
 ```
 
 ## 使用
 
 ``` ts
 // charrue.config.ts
-import { defineConfig } from "@charrue/load-local-file";
+import { defineConfig } from "@charrue/load-config";
 
 type UserConfig = {
   name: string;
@@ -27,7 +27,7 @@ export default defineConfig<UserConfig>({
 ```
 
 ``` ts
-import { loadConfig } from "@charrue/load-local-file";
+import { loadConfig } from "@charrue/load-config";
 
 const config = loadConfig("charrue.config.js") // { name: "foo" }
 ```

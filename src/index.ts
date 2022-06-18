@@ -101,7 +101,7 @@ const memoizeOne = (fn: any) => {
   };
 };
 
-const _loadConfig = async (filename: string, options: { cwd?: string }) => {
+const _loadConfig = async (filename: string, options: { cwd?: string } = {}) => {
   const { cwd = process.cwd() } = options;
   const tsConfigFile = findUp(`${filename}.ts`, {
     cwd,

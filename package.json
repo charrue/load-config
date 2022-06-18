@@ -1,6 +1,6 @@
 {
-  "name": "@charrue/load-local-config",
-  "version": "0.0.2",
+  "name": "@charrue/load-config",
+  "version": "0.0.3",
   "description": "load local config, support js and ts",
   "keywords": [
     "config",
@@ -17,7 +17,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/charrue/load-local-config"
+    "url": "https://github.com/charrue/load-config"
   },
   "scripts": {
     "build": "rollup -c",
