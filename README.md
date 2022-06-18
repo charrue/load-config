@@ -29,5 +29,26 @@ export default defineConfig<UserConfig>({
 ``` ts
 import { loadConfig } from "@charrue/load-config";
 
-const config = loadConfig("charrue.config.js") // { name: "foo" }
+// 文件名不需要带上扩展名，该方法会自动从charrue.config.ts或charrue.config.js
+// 优先加载ts文件
+const config = loadConfig("charrue.config") // { name: "foo" }
 ```
+
+
+
+## API
+
+```typescript
+const loadConfigFromFile: (configFilePath: string) => Promise<{
+    config: any;
+    dependencies: string[];
+}>;
+
+const loadConfig: (
+		filename: string,
+    options?: { cwd?: string }
+) => Promise<any>;
+
+const defineConfig: <T = any>(config: T) => T;
+```
+
