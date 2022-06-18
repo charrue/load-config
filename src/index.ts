@@ -114,7 +114,10 @@ const _loadConfig = async (filename: string, options: { cwd?: string } = {}) => 
   const canUsedConfigFile = tsConfigFile || jsConfigFile;
   if (existsSync(canUsedConfigFile)) {
     const configFromUser = await loadConfigFromFile(canUsedConfigFile);
-    return configFromUser.config;
+    return {
+      ...configFromUser,
+      path: canUsedConfigFile,
+    };
   }
   console.warn(`can not find ${filename}.ts or ${filename}.js`);
   return null;

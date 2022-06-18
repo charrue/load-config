@@ -18,7 +18,8 @@ describe("loadConfigFile", () => {
 
   test("loadConfig", async () => {
     const config = await loadConfig("toolkit.config", { cwd: path.resolve(__dirname, "./mocks") });
-    expect(config)
+
+    expect(config!.config)
       .toEqual({
         build: {
           esm: false,

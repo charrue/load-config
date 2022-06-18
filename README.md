@@ -31,7 +31,7 @@ import { loadConfig } from "@charrue/load-config";
 
 // 文件名不需要带上扩展名，该方法会自动从charrue.config.ts或charrue.config.js
 // 优先加载ts文件
-const config = loadConfig("charrue.config") // { name: "foo" }
+const { config } = loadConfig("charrue.config") // { name: "foo" }
 ```
 
 
@@ -47,7 +47,7 @@ const loadConfigFromFile: (configFilePath: string) => Promise<{
 const loadConfig: (
 		filename: string,
     options?: { cwd?: string }
-) => Promise<any>;
+) => Promise<{ config: any; dependencies: string[]; path: string; }>;
 
 const defineConfig: <T = any>(config: T) => T;
 ```
