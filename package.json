@@ -1,6 +1,6 @@
 {
   "name": "@charrue/load-local-config",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "load local config, support js and ts",
   "keywords": [
     "config",
@@ -11,9 +11,16 @@
   "main": "./dist/index.js",
   "module": "dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/charrue/load-local-config"
+  },
   "scripts": {
     "build": "rollup -c",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "lint": "eslint --fix",
     "prepare": "husky install",
     "test": "vitest"
